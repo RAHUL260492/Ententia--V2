@@ -11,7 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
-
+CONTENT_PRESERVATION_REPORT.md
+REFACTORING_SUMMARY.md
+QUICK_START.md
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
