@@ -5,9 +5,8 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Services', href: 'services', action: 'navigate' },
   { label: 'Solutions', href: 'solutions', action: 'navigate' },
   { label: 'Foundation', href: 'foundation', action: 'navigate' },
-  { label: 'Case Studies', href: 'casestudies', action: 'navigate' },
+  { label: 'Case Studies', href: 'case-studies', action: 'navigate' },
   { label: 'Insights', href: 'insights', action: 'navigate' },
-  { label: 'Contact Us', href: 'contact', action: 'navigate' },
 ];
 
 export const SOLUTIONS: Solution[] = [
@@ -68,7 +67,7 @@ export const SOLUTIONS: Solution[] = [
     title: 'OT Cyber Resilience',
     shortDescription: 'Enable automated network isolation and comprehensive monitoring for critical infrastructure.',
     fullDescription: 'A specialized security agent for Operational Technology (OT) networks. It continuously monitors industrial control protocols for anomalies, unauthorized access, and potential threats, capable of automated segmentation to contain breaches and ensure resilience.',
-    imageUrl: 'https://images.unsplash.com/photo-1558494949-ef526b01201b?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://images.squarespace-cdn.com/content/v1/622a4857d0e0ed54ed5da4ce/bc66dd53-1b78-4b66-aba1-cd2c729a9964/Why+is+Cyber+Resilience+Important+in+ICS%3AOT+environments%3F.jpg?format=2500w',
     tags: {
       industry: [Industry.UTILITIES, Industry.ENERGY, Industry.MANUFACTURING],
       function: [FunctionArea.IT_DIGITAL],
@@ -99,7 +98,7 @@ export const SOLUTIONS: Solution[] = [
       industry: [Industry.UTILITIES, Industry.ENERGY],
       function: [FunctionArea.OPERATIONS],
       outcome: [Outcome.OPERATIONAL_EFFICIENCY, Outcome.PRODUCTIVITY],
-      type: SolutionType.WORKFLOW_AUTOMATION,
+      type: SolutionType.AGENT,
     },
     roi: {
       range: '15-35%',
@@ -202,7 +201,7 @@ export const SOLUTIONS: Solution[] = [
     tags: {
       industry: [Industry.ENERGY],
       function: [FunctionArea.IT_DIGITAL],
-      outcome: [Outcome.PROCESS_OPTIMIZATION],
+      outcome: [Outcome.OPERATIONAL_EFFICIENCY],
       type: SolutionType.WORKFLOW_AUTOMATION
     },
     roi: {
@@ -273,7 +272,7 @@ export const SERVICE_OFFERINGS: ServiceOffering[] = [
   {
     id: 's3',
     title: 'Solution Design and Scaled Deployment',
-    description: 'Design, build, and deploy reliable AI solutions tailored to your organizational needs, using Ententia’s reusable foundation and purpose-built accelerators.',
+    description: 'Design, build, and deploy reliable AI solutions tailored to your organizational needs, using Ententia\'s reusable foundation and purpose-built accelerators.',
     deliverables: [
       'Solution design covering workflow, data, context, and governance',
       'Implementation and integration into enterprise systems',
@@ -308,24 +307,20 @@ export const SERVICE_OFFERINGS: ServiceOffering[] = [
 export const PLATFORM_FEATURES: PlatformFeature[] = [
   {
     title: 'Built-in Energy Industry Context',
-    description: 'Embedded domain knowledge, operational context, and terminology specific to the energy sector.',
-    bullets: ['Domain Knowledge', 'Operational Context', 'Industry Terminology'],
+    description: 'Embedded domain knowledge, operational context, and terminology specific to the energy sector.'
   },
   {
     title: 'Enterprise-Grade Data Connectivity',
-    description: 'Secure integration with structured and unstructured enterprise data sources.',
-    bullets: ['Structured Data', 'Unstructured Docs', 'Secure Integration'],
+    description: 'Secure integration with structured and unstructured enterprise data sources.'
   },
   {
     title: 'Accuracy & Risk Guardrails',
-    description: 'Built-in controls for reliable outputs with minimal hallucination risk.',
-    bullets: ['Hallucination Control', 'Reliable Outputs', 'Risk Management'],
+    description: 'Built-in controls for reliable outputs with minimal hallucination risk.'
   },
   {
     title: 'Configurable UX & Automations',
-    description: 'Flexible UI and user-defined workflow automations leveraging core AI capabilities.',
-    bullets: ['Flexible UI', 'Workflow Automation', 'No-code Automations'],
-  },
+    description: 'Flexible UI and user-defined workflow automations leveraging core AI capabilities.'
+  }
 ];
 
 export const PLATFORM_PRINCIPLES: PlatformPrinciple[] = [
@@ -401,53 +396,25 @@ export const PLATFORM_CAPABILITIES: PlatformCapability[] = [
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
+    id: 'cs1',
     title: 'Workflow Optimization',
     description: 'Eliminated 30–40% of low- or no-value work, driving 10%+ productivity gains for key surveillance workflow participants.',
   },
   {
+    id: 'cs2',
     title: 'Operations Optimization',
     description: 'Reduced deferred output by 15–20% and operating costs by up to 5% by improving the speed and quality of operational decisions.',
   },
   {
+    id: 'cs3',
     title: 'Payroll and Invoice Reconciliation',
     description: 'Delivered a 40–60% reduction in reconciliation effort while minimizing revenue leakage and invoicing errors for services-based operations.',
   },
 ];
 
-export const ENABLEMENT_SERVICES: CaseStudyDetail[] = [
-  {
-    id: 'e1',
-    title: 'Executive Alignment & AI Use Case Prioritization',
-    category: 'Enablement',
-    imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800',
-    content: {
-      label1: 'Challenge',
-      text1: 'Establish leadership alignment on high-impact AI opportunities and create a focused, execution-ready deployment roadmap.',
-      label2: 'Solution',
-      text2: 'Facilitated a structured working session with cross-functional leaders to align on practical AI applications, evaluate opportunities against business priorities, and identify use cases best suited for near-term deployment.',
-      label3: 'Outcome',
-      text3: 'Delivered a prioritized inventory of enterprise AI use cases, with clear executive alignment on which initiatives to advance first and a shared understanding of the path to accelerated deployment.'
-    }
-  },
-  {
-    id: 'e2',
-    title: 'Enterprise AI Governance & Program Foundations',
-    category: 'Enablement',
-    imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800',
-    content: {
-      label1: 'Challenge',
-      text1: 'Establish the governance, ownership, and operating foundations required to scale enterprise AI deployments responsibly and consistently.',
-      label2: 'Solution',
-      text2: 'Defined a fit-for-purpose governance model covering roles, decision rights, standards, and review processes, aligned with the organization’s risk posture, operating model, and deployment priorities.',
-      label3: 'Outcome',
-      text3: 'Enabled coordinated execution of AI initiatives across teams, reduced duplication and fragmentation, and created the clarity needed to move AI solutions from isolated efforts into repeatable production deployments.'
-    }
-  },
-];
-
 export const FULL_CASE_STUDIES: CaseStudyDetail[] = [
   {
-    id: '1',
+    id: 'fcs1',
     title: 'Workflow Optimization',
     category: 'Optimization',
     imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
@@ -461,7 +428,7 @@ export const FULL_CASE_STUDIES: CaseStudyDetail[] = [
     }
   },
   {
-    id: '2',
+    id: 'fcs2',
     title: 'Operations Optimization',
     category: 'Optimization',
     imageUrl: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f138?auto=format&fit=crop&q=80&w=800',
@@ -475,7 +442,7 @@ export const FULL_CASE_STUDIES: CaseStudyDetail[] = [
     }
   },
   {
-    id: '3',
+    id: 'fcs3',
     title: 'Payroll and Invoice Reconciliation',
     category: 'Optimization',
     imageUrl: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800',
@@ -490,80 +457,120 @@ export const FULL_CASE_STUDIES: CaseStudyDetail[] = [
   }
 ];
 
-export const INSIGHTS: InsightTeaser[] = [
+export const ENABLEMENT_SERVICES: CaseStudyDetail[] = [
   {
-    tag: 'Whitepaper',
-    title: 'The State of Enterprise AI 2025',
-    description: 'Why 80% of POCs fail to reach production and how to beat the odds.',
-    linkText: 'Read the Report',
+    id: 'es1',
+    title: 'Executive Alignment & AI Use Case Prioritization',
+    category: 'Enablement',
+    imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800',
+    content: {
+      label1: 'Challenge',
+      text1: 'Establish leadership alignment on high-impact AI opportunities and create a focused, execution-ready deployment roadmap.',
+      label2: 'Solution',
+      text2: 'Facilitated a structured working session with cross-functional leaders to align on practical AI applications, evaluate opportunities against business priorities, and identify use cases best suited for near-term deployment.',
+      label3: 'Outcome',
+      text3: 'Delivered a prioritized inventory of enterprise AI use cases, with clear executive alignment on which initiatives to advance first and a shared understanding of the path to accelerated deployment.'
+    }
   },
   {
-    tag: 'Case Study',
-    title: 'Global Energy Giant Scales Production',
-    description: 'How a major operator reduced deferred production by 20%.',
-    linkText: 'Read Case Study',
+    id: 'es2',
+    title: 'Enterprise AI Governance & Program Foundations',
+    category: 'Enablement',
+    imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800',
+    content: {
+      label1: 'Challenge',
+      text1: 'Establish the governance, ownership, and operating foundations required to scale enterprise AI deployments responsibly and consistently.',
+      label2: 'Solution',
+      text2: 'Defined a fit-for-purpose governance model covering roles, decision rights, standards, and review processes, aligned with the organization\'s risk posture, operating model, and deployment priorities.',
+      label3: 'Outcome',
+      text3: 'Enabled coordinated execution of AI initiatives across teams, reduced duplication and fragmentation, and created the clarity needed to move AI solutions from isolated efforts into repeatable production deployments.'
+    }
   },
 ];
 
 export const INSIGHTS_DATA: InsightArticle[] = [
   {
-    id: '1',
+    id: 'i1',
     title: 'Modernizing Enterprise Workflows with AI-Driven Automation',
     abstract: 'Legacy systems and siloed processes slow enterprises down. This article explains how AI-driven automation — evolving beyond traditional RPA — can connect disparate systems, reduce manual effort, and streamline complex workflows across functions. Learn why intelligent workflow agents are becoming a practical lever for operational productivity and agility.',
     categories: ['Enterprise AI Strategy'],
+    author: 'Ententia Team',
+    date: '2024-01-15',
     readingTime: '6-8 minutes',
     imageUrl: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?q=80&w=2070&auto=format&fit=crop',
   },
   {
-    id: '2',
+    id: 'i2',
     title: 'The Agility Advantage: How AI can be a game-changer for Mid-sized Enterprises',
     abstract: 'A practical look at how mid-sized enterprises can apply AI with speed and focus. This piece outlines a two-track approach that balances quick wins with longer-term transformation while minimizing disruption to core operations.',
     categories: ['Enterprise AI Strategy'],
+    author: 'Ententia Team',
+    date: '2024-01-10',
     readingTime: '7-9 minutes',
     imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
   },
   {
-    id: '3',
+    id: 'i3',
     title: 'Improving Safety and Compliance with Context-Aware AI',
     abstract: 'This article explores how context-aware AI can help HES teams improve consistency, accessibility, and compliance by simplifying procedure access, enriching historical data, and supporting personalized safety workflows.',
     categories: ['Risk, Governance & Trust', 'AI Use Cases'],
+    author: 'Ententia Team',
+    date: '2024-01-08',
     readingTime: '5 minutes',
-    imageUrl: 'https://images.unsplash.com/photo-1581092921461-eab62e97a783?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
-    id: '4',
+    id: 'i4',
     title: 'Framework for Selecting AI Models That Fit Enterprise Needs',
     abstract: 'Choosing the right AI model requires more than benchmark performance. Part I introduces a structured framework to evaluate models based on enterprise fit, integration needs, and long-term scalability.',
     categories: ['Enterprise AI Strategy', 'Execution Approach'],
+    author: 'Ententia Team',
+    date: '2024-01-05',
     readingTime: '8-10 minutes',
     imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070&auto=format&fit=crop',
   },
   {
-    id: '5',
+    id: 'i5',
     title: 'Beyond Performance: Choosing AI Models Aligned to Enterprise Strategy',
     abstract: 'Part II extends the model selection framework to include commercial, sustainability, and governance considerations—helping leaders assess risk, cost, and strategic alignment for scalable AI deployment.',
     categories: ['Enterprise AI Strategy', 'Execution Approach'],
+    author: 'Ententia Team',
+    date: '2024-01-03',
     readingTime: '8-10 minutes',
-    imageUrl: 'https://images.unsplash.com/photo-1611974765215-0279a358943a?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
-    id: '6',
+    id: 'i6',
     title: 'Applying AI to Drive Operational Value Across Workflows',
     abstract: 'This article shows how enterprise-ready AI can be applied across core operational workflows to accelerate analysis, improve decision quality, and reduce operational risk in real production environments.',
     categories: ['AI Use Cases'],
+    author: 'Ententia Team',
+    date: '2023-12-30',
     readingTime: '5 minutes',
     imageUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop',
   },
   {
-    id: '7',
+    id: 'i7',
     title: 'Harnessing Generative AI for Enterprise Excellence',
     abstract: 'A whitepaper on the practical challenges enterprises face in adopting Generative AI - especially accuracy, consistency, and operational safety - and a systematic approach to bridging the gap between potential and performance.',
     categories: ['Enterprise AI Strategy', 'Execution Approach'],
+    author: 'Ententia Team',
+    date: '2023-12-25',
     readingTime: '10-12 minutes',
     imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
-    isWhitepaper: true,
   }
 ];
+
+export const INSIGHTS: InsightTeaser[] = [];
+
+export const FILTER_OPTIONS: FilterOptions = {
+  Industry: [Industry.MANUFACTURING, Industry.UTILITIES, Industry.ENERGY, Industry.FINANCE, Industry.RETAIL, Industry.HEALTHCARE],
+  Function: [FunctionArea.OPERATIONS, FunctionArea.IT_DIGITAL, FunctionArea.HSE, FunctionArea.SUPPLY_CHAIN, FunctionArea.HR, FunctionArea.LEGAL, FunctionArea.CUSTOMER_SERVICE],
+  Outcome: [Outcome.OPERATIONAL_EFFICIENCY, Outcome.PRODUCTIVITY, Outcome.COST_REDUCTION, Outcome.ASSET_OPTIMIZATION, Outcome.CYBER_DEFENSE, Outcome.RISK_COMPLIANCE],
+  Type: [SolutionType.ASSISTANT, SolutionType.AGENT, SolutionType.WORKFLOW_AUTOMATION, SolutionType.PREDICTIVE_MODEL]
+};
+
+export const CATEGORIES = ['All', 'Enterprise AI Strategy', 'Implementation', 'Governance', 'Risk Management', 'Execution Approach', 'AI Use Cases', 'Risk, Governance & Trust'];
 
 export const FOOTER_LINKS: FooterSection[] = [
   {
@@ -579,15 +586,3 @@ export const FOOTER_LINKS: FooterSection[] = [
     links: ['Blog', 'Whitepapers', 'Documentation', 'Support'],
   },
 ];
-
-export const HEADLINE_STATS = [
-    { label: "ROI", value: "< 3 Months" },
-    { label: "Solutions", value: "Deployment Ready" }
-];
-
-export const FILTER_OPTIONS: FilterOptions = {
-  Industry: Object.values(Industry),
-  Function: Object.values(FunctionArea),
-  Outcome: Object.values(Outcome),
-  Type: Object.values(SolutionType),
-};
