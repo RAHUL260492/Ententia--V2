@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ententia | Enterprise AI & Insights</title>
+    <title>Ententia | Enterprise AI Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,91 +18,34 @@
             colors: {
               background: '#050505',
               surface: '#0A0A0A',
-              surfaceHighlight: '#1A1A1A',
-              primary: '#00CCFF', // Updated Cyan
-              secondary: '#0088CC',
-              accent: '#0066CC',
-              textMain: '#FFFFFF',
-              textMuted: '#9CA3AF',
-              // New Colors
-              warmWhite: '#FAF9F6',
-              textDark: '#111827',
-              textDarkMuted: '#4B5563',
+              surfaceHighlight: '#0F0F0F',
+              primary: '#00CCFF',
+              accent: '#00A3FF',
+              textMain: '#ffffff',
+              textMuted: '#B0B0B0',
+              textDarkMuted: '#888888',
+              textDark: '#1a1a1a',
             },
-            backgroundImage: {
-              'hero-glow': 'radial-gradient(circle at 50% 0%, rgba(0, 204, 255, 0.15) 0%, transparent 70%)',
-              'card-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.0) 100%)',
-            },
-            animation: {
-              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-              'glow': 'glow 2s ease-in-out infinite alternate',
-            },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              glow: {
-                '0%': { boxShadow: '0 0 5px rgba(0, 204, 255, 0.2)' },
-                '100%': { boxShadow: '0 0 20px rgba(0, 204, 255, 0.6), 0 0 10px rgba(0, 204, 255, 0.4)' },
-              }
-            }
-          }
-        }
+          },
+        },
       }
     </script>
-    <style type="text/tailwindcss">
+    <style>
       @layer utilities {
-        /* Matches the specific glass effect from the provided Insights design */
         .glass-card {
-          @apply bg-surface/60 backdrop-blur-[12px] border border-white/[0.08] transition-all duration-300;
-        }
-        .glass-card:hover {
-          @apply border-primary/30 shadow-[0_0_30px_rgba(0,204,255,0.1)];
-        }
-        /* New card style for light backgrounds */
-        .light-card {
-          @apply bg-white border border-gray-200 shadow-sm transition-all duration-300;
-        }
-        .light-card:hover {
-          @apply border-primary/30 shadow-lg transform -translate-y-1;
+          @apply bg-white/5 backdrop-blur-xl border border-white/10;
         }
         .glass-panel {
-          @apply bg-surface/50 backdrop-blur-md border border-white/5;
+          @apply bg-white/5 backdrop-blur-xl border border-white/10;
+        }
+        .hero-glow {
+          @apply bg-gradient-to-br from-primary/20 via-transparent to-accent/20;
         }
       }
-      body {
-        @apply bg-background text-textMain font-sans;
-      }
-
-      /* Custom Scrollbar adapted from Solutions Page design */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        @apply bg-background;
-      }
-      ::-webkit-scrollbar-thumb {
-        @apply bg-surfaceHighlight rounded-full border-2 border-background;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        @apply bg-primary/30;
-      }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body>
+  </head>
+  <body class="bg-background text-textMain">
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
 </html>

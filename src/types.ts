@@ -1,5 +1,3 @@
-
-
 export interface NavItem {
   label: string;
   href: string;
@@ -62,7 +60,7 @@ export interface Solution {
     range: string;
     description: string;
   };
-  features: string[]; // Replaces Frame/Engineer/Embed
+  features: string[];
   integrations: string[];
   deployment: string[];
   evaluation: string[];
@@ -75,12 +73,10 @@ export interface FilterState {
   type: SolutionType[];
 }
 
-// --- Preserved Types for App Functionality ---
-
-// Alias for backward compatibility if needed
-export type SolutionCard = Solution; 
+export type SolutionCard = Solution;
 
 export interface PlatformFeature {
+  id?: string;
   title: string;
   description: string;
   bullets?: string[];
@@ -98,27 +94,26 @@ export interface PlatformCapability {
 }
 
 export interface CaseStudy {
+  id?: string;
   title: string;
   description: string;
 }
 
-// New type for the detailed Case Studies page
 export interface CaseStudyDetail {
   id: string;
   title: string;
-  category: 'Optimization' | 'Enablement';
+  category: string;
   imageUrl: string;
   content: {
-    label1: string; // Challenge
+    label1: string;
     text1: string;
-    label2: string; // Solution
+    label2: string;
     text2: string;
-    label3: string; // Impact or Outcome
+    label3: string;
     text3: string;
   };
 }
 
-// New type for Service Offerings
 export interface ServiceOffering {
   id: string;
   title: string;
@@ -146,8 +141,6 @@ export interface FilterOptions {
   Type: string[];
 }
 
-// --- Insights Page Types ---
-
 export interface InsightArticle {
   id: string;
   title: string;
@@ -155,19 +148,28 @@ export interface InsightArticle {
   categories: string[];
   readingTime: string;
   imageUrl: string;
+  author?: string;
+  date?: string;
   isWhitepaper?: boolean;
 }
 
 export type Category = 
   | 'All'
   | 'Enterprise AI Strategy'
-  | 'Risk, Governance & Trust'
+  | 'Implementation'
+  | 'Governance'
+  | 'Risk Management'
   | 'Execution Approach'
-  | 'AI Use Cases';
+  | 'AI Use Cases'
+  | 'Risk, Governance & Trust';
 
 export const CATEGORIES: Category[] = [
+  'All',
   'Enterprise AI Strategy',
-  'Risk, Governance & Trust',
+  'Implementation',
+  'Governance',
+  'Risk Management',
   'Execution Approach',
-  'AI Use Cases'
+  'AI Use Cases',
+  'Risk, Governance & Trust'
 ];
