@@ -15,7 +15,7 @@ export const SOLUTIONS: Solution[] = [
     title: 'Predictive Maintenance',
     shortDescription: 'Enable comprehensive operational and equipment insights to maximize production and profitability.',
     fullDescription: 'A predictive modeling solution that ingests real-time sensor data and historical maintenance logs to predict equipment failures before they occur. It generates actionable alerts and maintenance schedules to minimize unplanned downtime and extend asset life.',
-    imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800',
+    imageUrl: '/images/predictive-maintenance.png',
     tags: {
       industry: [Industry.MANUFACTURING, Industry.ENERGY],
       function: [FunctionArea.OPERATIONS, FunctionArea.IT_DIGITAL],
@@ -41,7 +41,7 @@ export const SOLUTIONS: Solution[] = [
     title: 'Dynamic Work Orders',
     shortDescription: 'Enable end-to-end automated work order generation across production facilities.',
     fullDescription: 'An automated workflow solution that connects operational triggers to workforce management. It auto-generates detailed work orders with required parts, tools, and procedures based on asset health data, ensuring the right technician is dispatched at the right time.',
-    imageUrl: 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=800',
+    imageUrl: '/images/dynamic-work-order.png',
     tags: {
       industry: [Industry.ENERGY, Industry.UTILITIES],
       function: [FunctionArea.OPERATIONS],
@@ -67,7 +67,7 @@ export const SOLUTIONS: Solution[] = [
     title: 'OT Cyber Resilience',
     shortDescription: 'Enable automated network isolation and comprehensive monitoring for critical infrastructure.',
     fullDescription: 'A specialized security agent for Operational Technology (OT) networks. It continuously monitors industrial control protocols for anomalies, unauthorized access, and potential threats, capable of automated segmentation to contain breaches and ensure resilience.',
-    imageUrl: 'https://images.squarespace-cdn.com/content/v1/622a4857d0e0ed54ed5da4ce/bc66dd53-1b78-4b66-aba1-cd2c729a9964/Why+is+Cyber+Resilience+Important+in+ICS%3AOT+environments%3F.jpg?format=2500w',
+    imageUrl: '/images/ot-cyber-resilience.png',
     tags: {
       industry: [Industry.UTILITIES, Industry.ENERGY, Industry.MANUFACTURING],
       function: [FunctionArea.IT_DIGITAL],
@@ -93,7 +93,7 @@ export const SOLUTIONS: Solution[] = [
     title: 'Automate Work Order Triage',
     shortDescription: 'Route, summarize, and prioritize work orders with guardrails — reduce backlog and speed execution.',
     fullDescription: 'Use intelligent agents to triage incoming maintenance requests. The system categorizes issues, identifies duplicates, prioritizes based on criticality, and routes to the correct trade or department without manual intervention, significantly reducing backlog.',
-    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800',
+    imageUrl: '/images/automate-work-order-triage.png',
     tags: {
       industry: [Industry.UTILITIES, Industry.ENERGY],
       function: [FunctionArea.OPERATIONS],
@@ -431,7 +431,7 @@ export const FULL_CASE_STUDIES: CaseStudyDetail[] = [
     id: 'fcs2',
     title: 'Operations Optimization',
     category: 'Optimization',
-    imageUrl: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f138?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://images.unsplash.com/photo-1686061592689-312bbfb5c055?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     content: {
       label1: 'Challenge',
       text1: 'Fragmented data and slow analysis led to delayed decisions, deferred output, and higher operating costs.',
