@@ -118,9 +118,9 @@ const Services: React.FC = () => {
               },
             ].map((feature, idx) => (
               <SharedComponents.FadeIn key={idx} delay={idx * 100}>
-                <div className="bg-[#0A0A0A] border border-white/10 rounded-xl p-8">
+                <div className="bg-[#0A0A0A] border border-white/10 rounded-xl p-8 h-full flex flex-col min-h-[200px]">
                   <h3 className="text-xl font-bold text-white mb-3 tracking-wide">{feature.title}</h3>
-                  <p className="text-textMuted leading-relaxed">{feature.description}</p>
+                  <p className="text-textMuted leading-relaxed flex-1">{feature.description}</p>
                 </div>
               </SharedComponents.FadeIn>
             ))}

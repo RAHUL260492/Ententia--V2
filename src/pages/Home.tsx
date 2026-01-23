@@ -214,8 +214,7 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
               {headlineStats.map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-white mb-3 whitespace-nowrap tracking-wide">
-                    {stat.value}
-                    <span className="text-primary">{stat.unit}</span>
+                    <span className="text-primary">{stat.value} {stat.unit}</span>
                   </div>
                   <p className="text-[10px] md:text-xs font-bold text-textMuted uppercase tracking-widest max-w-[200px] mx-auto leading-relaxed">
                     {stat.label}
