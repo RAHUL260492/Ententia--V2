@@ -83,14 +83,14 @@ const Insights: React.FC = () => {
         <SharedComponents.FadeIn className="relative z-10 max-w-5xl mx-auto text-center">
           <div className="mb-6">
             <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
-              Insights & Resources
+              Insights & Perspectives
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-wide">
             Enterprise AI Insights & Strategy
           </h1>
           <p className="text-xl text-textMuted italic mb-8 max-w-3xl mx-auto">
-            Thought leadership, research, and practical guidance to guide your AI transformation journey.
+            Practical perspectives on deploying enterprise AI in real-world environments, from strategy to execution and adoption.
           </p>
         </SharedComponents.FadeIn>
       </section>
@@ -198,7 +198,7 @@ const Insights: React.FC = () => {
       </section>
 
       {/* Featured Resources Section */}
-      <section className="py-20 px-6 md:px-12 border-t border-white/10">
+      {/* <section className="py-20 px-6 md:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <SharedComponents.SectionHeader
             eyebrow="Featured Resources"
@@ -227,27 +227,22 @@ const Insights: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 px-6 md:px-12 border-t border-white/10">
         <div className="max-w-4xl mx-auto">
           <SharedComponents.FadeIn className="bg-gradient-to-r from-primary/10 via-transparent to-transparent border border-primary/20 rounded-2xl p-12 md:p-16 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
+              Interested in applying these ideas in your organization?
             </h2>
             <p className="text-lg text-textMuted mb-8">
               Connect with our team to discuss how our solutions can drive measurable impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/contact-us">
                 <SharedComponents.Button className="rounded-full">
-                  Schedule a Consultation <ArrowRight size={18} />
-                </SharedComponents.Button>
-              </Link>
-              <Link to="/solutions">
-                <SharedComponents.Button variant="secondary" className="rounded-full">
-                  Explore Solutions
+                  Contact Us <ArrowRight size={18} />
                 </SharedComponents.Button>
               </Link>
             </div>

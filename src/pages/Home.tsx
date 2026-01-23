@@ -1,29 +1,32 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import {
-  CheckCircle2,
-  Layers,
-  ArrowRight,
-} from 'lucide-react';
-import { SOLUTIONS, PLATFORM_FEATURES, CASE_STUDIES } from '../constants';
-import { Solution } from '../types';
-import SharedComponents from '../components/SharedComponents';
-import { usePageTitle } from '../hooks/usePageTitle';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { CheckCircle2, Layers, ArrowRight } from "lucide-react";
+import { SOLUTIONS, PLATFORM_FEATURES, CASE_STUDIES } from "../constants";
+import { Solution } from "../types";
+import SharedComponents from "../components/SharedComponents";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 interface HomePageProps {
   onSolutionSelect: (solution: Solution) => void;
 }
 
 const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
-  usePageTitle('Ententia | Enterprise AI Solutions');
-  const [selectedSolution, setSelectedSolution] = useState<Solution | null>(null);
+  usePageTitle("Ententia | Enterprise AI Solutions");
+  const [selectedSolution, setSelectedSolution] = useState<Solution | null>(
+    null,
+  );
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const highlightedSolutions = SOLUTIONS.slice(0, 4);
 
   const headlineStats = [
-    { value: '15-40', unit: '%', label: 'Improvement in key operational outcomes' },
-    { value: '30-70', unit: '%', label: 'Reduction in manual effort' },
-    { value: '6–8', unit: ' Hrs/Wk', label: 'Saved per user' },
-    { value: '4–8', unit: ' Weeks', label: 'To initial production deployment' },
+    {
+      value: "15-40",
+      unit: "%",
+      label: "Improvement in key operational outcomes",
+    },
+    { value: "30-70", unit: "%", label: "Reduction in manual effort" },
+    { value: "6–8", unit: " Hrs/Wk", label: "Saved per user" },
+    { value: "4–8", unit: " Weeks", label: "To initial production deployment" },
   ];
 
   return (
@@ -35,20 +38,16 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
+              "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
           }}
         />
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-16 items-center relative z-10">
           <div className="md:col-span-7">
-            <SharedComponents.FadeIn delay={0}>
-              <span className="text-primary text-sm font-bold tracking-widest uppercase mb-6 block">
-                Ententia
-              </span>
-            </SharedComponents.FadeIn>
             <SharedComponents.FadeIn delay={150}>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-[1.1] tracking-wide">
-                Intelligence <br />
+                Intelligence,
+                <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#00A3FF]">
                   Operationalized
                 </span>
@@ -56,7 +55,8 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
             </SharedComponents.FadeIn>
             <SharedComponents.FadeIn delay={300}>
               <p className="text-xl text-textMuted italic mb-12 max-w-lg leading-relaxed">
-                AI-enabled services to deploy trusted, scalable enterprise AI solutions that turn context into competitive advantage.
+                AI-enabled services to deploy trusted, scalable enterprise AI
+                solutions that turn context into competitive advantage.
               </p>
             </SharedComponents.FadeIn>
             <SharedComponents.FadeIn delay={450}>
@@ -65,12 +65,14 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
                   <SharedComponents.Button>Contact Us</SharedComponents.Button>
                 </Link>
                 <Link to="/solutions">
-                  <SharedComponents.Button variant="secondary">Explore Solutions</SharedComponents.Button>
+                  <SharedComponents.Button variant="secondary">
+                    Explore Solutions
+                  </SharedComponents.Button>
                 </Link>
               </div>
             </SharedComponents.FadeIn>
           </div>
-          <div className="md:col-span-5 relative">
+          {/* <div className="md:col-span-5 relative">
             <SharedComponents.FadeIn delay={600} direction="left" className="h-full">
               <div className="relative w-full aspect-square max-w-[500px] mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-[#00A3FF]/20 rounded-full blur-[100px]" />
@@ -92,88 +94,7 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
                 </div>
               </div>
             </SharedComponents.FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Ententia Section */}
-      <section className="py-16 bg-[#0A0A0A]">
-        <div className="max-w-7xl mx-auto px-6">
-          <SharedComponents.FadeIn>
-            <div className="text-center mb-24">
-              <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
-                Why Ententia?
-              </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 tracking-wide">
-                We Deliver Measurable Outcomes in Weeks
-              </h2>
-              <p className="text-textMuted max-w-2xl mx-auto text-xl italic">
-                Our services are powered by our proprietary enterprise AI foundation and suite of purpose-built accelerators.
-              </p>
-            </div>
-          </SharedComponents.FadeIn>
-          <div className="grid md:grid-cols-2 gap-10">
-            {[
-              {
-                title: 'Enterprise-Ready Foundation',
-                desc: 'Ententia\'s AI-enabled services leverage a secure, scalable, and model-agnostic foundation designed to operate inside real enterprise environments from day one.',
-                bullets: [
-                  'Flexible architecture and design, deployed in your cloud, keeps you in control',
-                  'Core capabilities support wide range of use cases and teams on a shared foundation',
-                  'Built-in connectors accelerate integration with enterprise data and systems',
-                  'Enterprise-grade identity, security, and observability provide the right guardrails',
-                ],
-              },
-              {
-                title: 'Domain Expertise & Context',
-                desc: 'Ententia embeds deep domain knowledge and enterprise context directly into every solution, enabling them to reason, respond, and act in ways that align with how your business operates.',
-                bullets: [
-                  'Pre-built industry and domain-specific knowledge structures',
-                  'Reduced prompt engineering and configuration through built-in context',
-                  'Context-aware responses grounded in operational data, documents, and workflows',
-                  'Built-in industry-specific workflows that reflect real-world constraints and decisions',
-                ],
-              },
-              {
-                title: 'Speed to Value',
-                desc: 'Ententia\'s services accelerate the path from use case concept to deployment by combining a strong foundation with proven solution patterns and accelerators.',
-                bullets: [
-                  'Pre-built solution patterns reduce design and build time',
-                  'Configurable workflows and automations enable rapid iteration',
-                  'Integrated evaluation framework support early validation',
-                  'Typical deployments deliver measurable outcomes in weeks',
-                ],
-              },
-              {
-                title: 'Delivery & Change Management',
-                desc: 'Ententia services and solutions are designed to build user trust and drive adoption, with a delivery approach tailored to your organization\'s readiness and urgency.',
-                bullets: [
-                  'Structured evaluation and delivery approach align to your specific needs',
-                  'Human-in-the-loop workflows ensure trust, accountability, and control',
-                  'Clear ownership, governance, and escalation paths respect internal controls',
-                  'Transparent performance metrics and KPIs enable measurable ROI',
-                ],
-              },
-            ].map((item, i) => (
-              <SharedComponents.FadeIn key={i} delay={i * 100} className="h-full">
-                <div className="flex flex-col h-full p-10 rounded-xl bg-[#0F0F0F] border border-white/10 shadow-sm hover:border-primary/30 transition-colors">
-                  <div className="mb-6 flex items-center gap-4">
-                    <CheckCircle2 className="text-primary shrink-0" size={28} />
-                    <h3 className="text-[22px] font-bold text-white tracking-wide">{item.title}</h3>
-                  </div>
-                  <p className="text-textMuted mb-8 leading-relaxed text-base">{item.desc}</p>
-                  <ul className="space-y-3 mt-auto border-t border-white/5 pt-6">
-                    {item.bullets.map((bullet, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-textMuted/80">
-                        <span className="text-primary/70 mt-1">•</span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </SharedComponents.FadeIn>
-            ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -189,21 +110,29 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
                 Solutions that Deliver Results
               </h2>
               <p className="text-textMuted max-w-2xl mx-auto text-xl italic mb-10">
-                Production-ready AI solutions across industries, function, and business outcomes.
+                Production-ready AI solutions across industries, function, and
+                business outcomes.
               </p>
             </div>
           </SharedComponents.FadeIn>
 
           <div className="grid md:grid-cols-2 gap-10 mb-20">
             {highlightedSolutions.map((item, index) => (
-              <SharedComponents.FadeIn key={item.id} delay={index * 100} className="h-full">
+              <SharedComponents.FadeIn
+                key={item.id}
+                delay={index * 100}
+                className="h-full"
+              >
                 <div
                   onClick={() => {
                     setSelectedSolution(item);
                     onSolutionSelect(item);
                   }}
                 >
-                  <SharedComponents.SolutionGridItem item={item} onClick={() => {}} />
+                  <SharedComponents.SolutionGridItem
+                    item={item}
+                    onClick={() => {}}
+                  />
                 </div>
               </SharedComponents.FadeIn>
             ))}
@@ -214,7 +143,9 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
               {headlineStats.map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-white mb-3 whitespace-nowrap tracking-wide">
-                    <span className="text-primary">{stat.value} {stat.unit}</span>
+                    <span className="text-primary">
+                      {stat.value} {stat.unit}
+                    </span>
                   </div>
                   <p className="text-[10px] md:text-xs font-bold text-textMuted uppercase tracking-widest max-w-[200px] mx-auto leading-relaxed">
                     {stat.label}
@@ -226,14 +157,16 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
 
           <div className="text-center">
             <Link to="/solutions">
-              <SharedComponents.Button variant="secondary">Explore Solutions</SharedComponents.Button>
+              <SharedComponents.Button variant="secondary">
+                Explore Solutions
+              </SharedComponents.Button>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Foundation Section */}
-      <section className="py-16 bg-[#0A0A0A] relative overflow-hidden">
+      {/* <section className="py-16 bg-[#0A0A0A] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SharedComponents.SectionHeader
             eyebrow="Our Foundation"
@@ -259,15 +192,19 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Case Studies */}
       <section className="py-16 bg-[#050505]">
         <div className="max-w-7xl mx-auto px-6">
           <SharedComponents.FadeIn>
             <div className="mb-20 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 tracking-wide">Primary Case Studies</h2>
-              <p className="text-textMuted text-xl italic">Production deployments delivering measurable ROI.</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 tracking-wide">
+                Case Studies
+              </h2>
+              <p className="text-textMuted text-xl italic">
+                Production deployments delivering measurable ROI.
+              </p>
             </div>
           </SharedComponents.FadeIn>
           <div className="grid md:grid-cols-3 gap-10">
@@ -278,18 +215,139 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
                   <h3 className="text-[22px] font-bold text-white mb-6 group-hover:text-primary transition-colors tracking-wide">
                     {story.title}
                   </h3>
-                  <p className="text-textMuted leading-relaxed flex-1 text-base">{story.description}</p>
+                  <p className="text-textMuted leading-relaxed flex-1 text-base">
+                    {story.description}
+                  </p>
                 </div>
               </SharedComponents.FadeIn>
             ))}
           </div>
           <SharedComponents.FadeIn className="mt-16 text-center">
             <Link to="/case-studies">
-              <SharedComponents.Button variant="ghost" className="hover:text-white">
-                Explore All Case Studies & Services <ArrowRight size={16} />
+              <SharedComponents.Button
+                variant="ghost"
+                className="hover:text-white"
+              >
+                Explore Case Studies <ArrowRight size={16} />
               </SharedComponents.Button>
             </Link>
           </SharedComponents.FadeIn>
+        </div>
+      </section>
+
+      {/* Why Ententia Section */}
+      <section className="py-16 bg-[#0A0A0A]">
+        <div className="max-w-7xl mx-auto px-6">
+          <SharedComponents.FadeIn>
+            <div className="text-center mb-24">
+              <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
+                Why Ententia?
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 tracking-wide">
+                We Deliver Measurable Outcomes in Weeks
+              </h2>
+              <p className="text-textMuted max-w-2xl mx-auto text-xl italic">
+                Our services are powered by our proprietary enterprise AI
+                foundation and suite of purpose-built accelerators.
+              </p>
+            </div>
+          </SharedComponents.FadeIn>
+          <div className="grid md:grid-cols-2 gap-10">
+            {[
+              {
+                title: "Enterprise-Ready Foundation",
+                desc: "Ententia's AI-enabled services leverage a secure, scalable, and model-agnostic foundation designed to operate inside real enterprise environments from day one.",
+                bullets: [
+                  "Flexible architecture and design, deployed in your cloud, keeps you in control",
+                  "Core capabilities support wide range of use cases and teams on a shared foundation",
+                  "Built-in connectors accelerate integration with enterprise data and systems",
+                  "Enterprise-grade identity, security, and observability provide the right guardrails",
+                ],
+              },
+              {
+                title: "Domain Expertise & Context",
+                desc: "Ententia embeds deep domain knowledge and enterprise context directly into every solution, enabling them to reason, respond, and act in ways that align with how your business operates.",
+                bullets: [
+                  "Pre-built industry and domain-specific knowledge structures",
+                  "Reduced prompt engineering and configuration through built-in context",
+                  "Context-aware responses grounded in operational data, documents, and workflows",
+                  "Built-in industry-specific workflows that reflect real-world constraints and decisions",
+                ],
+              },
+              {
+                title: "Speed to Value",
+                desc: "Ententia's services accelerate the path from use case concept to deployment by combining a strong foundation with proven solution patterns and accelerators.",
+                bullets: [
+                  "Pre-built solution patterns reduce design and build time",
+                  "Configurable workflows and automations enable rapid iteration",
+                  "Integrated evaluation framework support early validation",
+                  "Typical deployments deliver measurable outcomes in weeks",
+                ],
+              },
+              {
+                title: "Delivery & Change Management",
+                desc: "Ententia services and solutions are designed to build user trust and drive adoption, with a delivery approach tailored to your organization's readiness and urgency.",
+                bullets: [
+                  "Structured evaluation and delivery approach align to your specific needs",
+                  "Human-in-the-loop workflows ensure trust, accountability, and control",
+                  "Clear ownership, governance, and escalation paths respect internal controls",
+                  "Transparent performance metrics and KPIs enable measurable ROI",
+                ],
+              },
+            ].map((item, i) => {
+              const isActive = activeIndex === i;
+
+              return (
+                <SharedComponents.FadeIn
+                  key={i}
+                  delay={i * 100}
+                  className="h-full"
+                >
+                  <div
+                    onClick={() => setActiveIndex(isActive ? null : i)}
+                    className="group flex flex-col h-full p-10 rounded-xl bg-[#0F0F0F] border border-white/10 shadow-sm hover:border-primary/30 transition-colors cursor-pointer"
+                  >
+                    {/* Header */}
+                    <div className="mb-6 flex items-center gap-4">
+                      <CheckCircle2
+                        className="text-primary shrink-0"
+                        size={28}
+                      />
+                      <h3 className="text-[22px] font-bold text-white tracking-wide">
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    {/* Description (always visible) */}
+                    <p className="text-textMuted mb-6 leading-relaxed text-base">
+                      {item.desc}
+                    </p>
+
+                    {/* Bullets – hidden by default */}
+                    <div
+                      className={`
+            overflow-hidden transition-all duration-300
+            ${isActive ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
+            group-hover:max-h-[500px] group-hover:opacity-100
+          `}
+                    >
+                      <ul className="space-y-3 border-t border-white/5 pt-6">
+                        {item.bullets.map((bullet, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 text-sm text-textMuted/80"
+                          >
+                            <span className="text-primary/70 mt-1">•</span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </SharedComponents.FadeIn>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -300,14 +358,19 @@ const HomePage: React.FC<HomePageProps> = ({ onSolutionSelect }) => {
             Turn AI solutions into real outcomes for your organization.
           </h2>
           <p className="text-textMuted text-xl italic mb-16">
-            Explore how Ententia helps teams deploy trusted AI solutions that deliver ROI in weeks.
+            Explore how Ententia helps teams deploy trusted AI solutions that
+            deliver ROI in weeks.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link to="/contact-us">
-              <SharedComponents.Button variant="primary">Contact Us</SharedComponents.Button>
+              <SharedComponents.Button variant="primary">
+                Contact Us
+              </SharedComponents.Button>
             </Link>
-            <Link to="/solutions">
-              <SharedComponents.Button variant="secondary">Explore Solutions</SharedComponents.Button>
+            <Link to="/services">
+              <SharedComponents.Button variant="secondary">
+                Explore Services
+              </SharedComponents.Button>
             </Link>
           </div>
         </div>

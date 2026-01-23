@@ -109,12 +109,6 @@ const CaseStudyDetailModal: React.FC<{
               </p>
             </div>
           </div>
-
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <p className="text-sm text-textMuted text-center">
-              Press <span className="text-white border border-white/20 rounded px-1.5 py-0.5 text-[10px] mx-1">Esc</span> to close.
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -144,10 +138,10 @@ const CaseStudies: React.FC = () => {
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-wide">
-            Case Studies: Proven Impact Across Industries
+            Delivering Measurable ROI
           </h1>
           <p className="text-xl text-textMuted italic mb-8 max-w-3xl mx-auto">
-            See how leading enterprises are leveraging our solutions to drive operational efficiency, reduce costs, and accelerate transformation.
+            Explore real life examples of Ententia's services and solutions deliveriving measurable impact accross industries and functions.
           </p>
         </SharedComponents.FadeIn>
       </section>
@@ -155,13 +149,8 @@ const CaseStudies: React.FC = () => {
       {/* Enablement Services Section */}
       <section className="py-16 px-6 md:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
-          <SharedComponents.SectionHeader
-            eyebrow="Enablement Services"
-            title="Enterprise Foundation Stories"
-            description="Strategic initiatives that set teams up for success"
-          />
-
-          <div className="grid md:grid-cols-2 gap-8 mt-16">
+        
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
             {ENABLEMENT_SERVICES.map((item, index) => (
               <CaseStudyCard
                 key={item.id}
@@ -169,19 +158,21 @@ const CaseStudies: React.FC = () => {
                 onClick={handleCaseClick}
               />
             ))}
+
+            {FULL_CASE_STUDIES.map((item, index) => (
+            <CaseStudyCard
+              key={item.id}
+              caseStudy={item}
+              onClick={handleCaseClick}
+            />
+          ))}
           </div>
         </div>
       </section>
 
       {/* Full Case Studies Section */}
-      <section className="py-16 px-6 md:px-12 border-t border-white/10">
+      {/* <section className="py-16 px-6 md:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
-          <SharedComponents.SectionHeader
-            eyebrow="Optimization Stories"
-            title="Measurable Business Impact"
-            description="Solutions that transformed operations and delivered quantifiable results"
-          />
-
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             {FULL_CASE_STUDIES.map((item, index) => (
               <CaseStudyCard
@@ -192,7 +183,7 @@ const CaseStudies: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Impact Stats */}
       <section className="py-16 px-6 md:px-12 border-t border-white/10">
@@ -235,7 +226,7 @@ const CaseStudies: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <SharedComponents.FadeIn className="bg-gradient-to-r from-primary/10 via-transparent to-transparent border border-primary/20 rounded-2xl p-12 md:p-16 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Create Your Success Story?
+              Turn AI solutions into real outcomes for your organization.
             </h2>
             <p className="text-lg text-textMuted mb-8">
               Let's explore how we can drive measurable impact for your organization.
@@ -243,7 +234,7 @@ const CaseStudies: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact-us">
                 <SharedComponents.Button className="rounded-full">
-                  Start Your Journey <ArrowRight size={18} />
+                  Contact Us <ArrowRight size={18} />
                 </SharedComponents.Button>
               </Link>
               <Link to="/solutions">

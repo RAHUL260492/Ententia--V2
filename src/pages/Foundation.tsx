@@ -1,37 +1,74 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Lock, Layers } from 'lucide-react';
-import { PLATFORM_PRINCIPLES, PLATFORM_CAPABILITIES } from '../constants';
-import SharedComponents from '../components/SharedComponents';
-import { usePageTitle } from '../hooks/usePageTitle';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Zap,
+  Lock,
+  Layers,
+  ShieldCheck,
+  Settings,
+} from "lucide-react";
+import { PLATFORM_PRINCIPLES, PLATFORM_CAPABILITIES } from "../constants";
+import SharedComponents from "../components/SharedComponents";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 const Foundation: React.FC = () => {
-  usePageTitle('Foundation | Ententia');
+  usePageTitle("Foundation | Ententia");
   const iconMap: Record<number, React.ReactNode> = {
-    0: <Zap size={24} />,
-    1: <Lock size={24} />,
-    2: <Layers size={24} />,
-    3: <Zap size={24} />,
-    4: <Lock size={24} />,
+    0: <Zap size={24} />, // Accelerated Solution Delivery
+    1: <Lock size={24} />, // Security / Trust
+    2: <Layers size={24} />, // Scalability / Architecture
+    3: <ShieldCheck size={24} />, // Reliability / Resilience
+    4: <Settings size={24} />, // Operational Excellence
   };
+
+  const CapabilityCard: React.FC<{
+    capability: {
+      title: string;
+      description: string;
+      bullets: string[];
+    };
+  }> = ({ capability }) => (
+    <SharedComponents.FadeIn className="group bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 flex flex-col h-full shadow-lg">
+      <h3 className="text-2xl font-bold text-white mb-3 tracking-wide group-hover:text-primary transition-colors">
+        {capability.title}
+      </h3>
+
+      <p className="text-textMuted text-base mb-6 leading-relaxed flex-1">
+        {capability.description}
+      </p>
+
+      <div className="space-y-3 mb-6">
+        {capability.bullets.map((bullet, idx) => (
+          <div key={idx} className="flex gap-3 items-start">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+            <span className="text-sm text-textMuted">{bullet}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="pt-4 border-t border-white/10" />
+    </SharedComponents.FadeIn>
+  );
 
   return (
     <div className="min-h-screen bg-[#050505]">
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 md:pt-48 md:pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
-        
+
         <SharedComponents.FadeIn className="relative z-10 max-w-5xl mx-auto text-center">
           <div className="mb-6">
             <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
-              Platform Foundation
+              Foundation
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-wide">
-            The Ententia Platform Foundation
+            AI Foundation Built for Enterprise Reality
           </h1>
           <p className="text-xl text-textMuted italic mb-8 max-w-3xl mx-auto">
-            Enterprise-ready architecture, governance controls, and reusable accelerators built for reliability and scale.
+            A production-ready foundation for deploying secure, scalable AI
+            solutions.
           </p>
         </SharedComponents.FadeIn>
       </section>
@@ -41,22 +78,29 @@ const Foundation: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <SharedComponents.SectionHeader
             eyebrow="Core Principles"
-            title="Built on Five Core Principles"
+            title="Built on Five Core Design Principles"
             description="Our foundation is designed around principles that ensure reliability, trust, and scalability."
           />
 
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             {PLATFORM_PRINCIPLES.map((principle, idx) => (
-              <SharedComponents.FadeIn key={idx} delay={idx * 100} className="h-full">
+              <SharedComponents.FadeIn
+                key={principle.id ?? idx}
+                delay={idx * 100}
+                className="h-full"
+              >
                 <div className="bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-300 h-full flex flex-col group">
+                  {/* Icon */}
                   <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                    {iconMap[idx] && (
-                      <div className="text-primary">{iconMap[idx]}</div>
-                    )}
+                    <div className="text-primary">{iconMap[idx]}</div>
                   </div>
+
+                  {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-3 tracking-wide group-hover:text-primary transition-colors">
                     {principle.title}
                   </h3>
+
+                  {/* Description */}
                   <p className="text-textMuted leading-relaxed flex-1">
                     {principle.description}
                   </p>
@@ -71,43 +115,23 @@ const Foundation: React.FC = () => {
       <section className="py-16 px-6 md:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <SharedComponents.SectionHeader
-            eyebrow="Platform Capabilities"
+            eyebrow="Capabilities"
             title="Core Capabilities That Enable Success"
-            description="The platform is built with five interconnected capabilities designed to work together."
+            description="Platform with Foundation."
           />
 
-          <div className="space-y-8 mt-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 items-stretch">
             {PLATFORM_CAPABILITIES.map((capability, idx) => (
-              <SharedComponents.FadeIn key={idx} delay={idx * 100}>
-                <div className="bg-[#0A0A0A] border border-white/10 rounded-2xl p-10 hover:border-primary/30 transition-all duration-300 group">
-                  <div className="flex flex-col md:flex-row gap-8">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-3 tracking-wide group-hover:text-primary transition-colors">
-                        {capability.title}
-                      </h3>
-                      <p className="text-textMuted text-base leading-relaxed mb-6">
-                        {capability.description}
-                      </p>
-
-                      <div className="space-y-3">
-                        {capability.bullets.map((bullet, bulletIdx) => (
-                          <div key={bulletIdx} className="flex gap-3 items-start">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
-                            <span className="text-textMuted text-sm leading-relaxed">{bullet}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SharedComponents.FadeIn>
+              <div key={idx} className="h-full">
+                <CapabilityCard capability={capability} />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Architecture Section */}
-      <section className="py-16 px-6 md:px-12 border-t border-white/10">
+      {/* <section className="py-16 px-6 md:px-12 border-t border-white/10">
         <div className="max-w-4xl mx-auto">
           <SharedComponents.FadeIn>
             <div className="bg-gradient-to-r from-primary/10 via-transparent to-transparent border border-primary/20 rounded-2xl p-12 md:p-16">
@@ -134,27 +158,31 @@ const Foundation: React.FC = () => {
             </div>
           </SharedComponents.FadeIn>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 px-6 md:px-12 border-t border-white/10">
         <div className="max-w-4xl mx-auto">
           <SharedComponents.FadeIn className="bg-gradient-to-r from-primary/10 via-transparent to-transparent border border-primary/20 rounded-2xl p-12 md:p-16 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build on a Solid Foundation?
+              Ready to see how it can help you accelerate your AI journey?
             </h2>
             <p className="text-lg text-textMuted mb-8">
-              Explore our solutions or connect with our team to discuss your platform requirements.
+              Explore our solutions or connect with our team to discuss your
+              platform requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/solutions">
+              <Link to="/contact-us">
                 <SharedComponents.Button className="rounded-full">
-                  Explore Solutions <ArrowRight size={18} />
+                  Contact Us <ArrowRight size={18} />
                 </SharedComponents.Button>
               </Link>
-              <Link to="/contact-us">
-                <SharedComponents.Button variant="secondary" className="rounded-full">
-                  Get in Touch
+              <Link to="/solutions">
+                <SharedComponents.Button
+                  variant="secondary"
+                  className="rounded-full"
+                >
+                  Explore solutions
                 </SharedComponents.Button>
               </Link>
             </div>

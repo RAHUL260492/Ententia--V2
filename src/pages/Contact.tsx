@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#050505]">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 md:pt-48 md:pb-16 overflow-hidden">
+      <section className="relative pt-20 pb-8 md:pt-40 md:pb-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
         
         <SharedComponents.FadeIn className="relative z-10 max-w-5xl mx-auto text-center">
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-6 md:px-12">
+      <section className="py-8 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Information */}
@@ -98,13 +98,13 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-bold text-white mb-1 tracking-wide">Email</h4>
                     <p className="text-textMuted hover:text-primary transition-colors cursor-pointer">
-                      hello@ententia.com
+                      info@ententia.ai 
                     </p>
                   </div>
                 </div>
 
                 {/* Phone */}
-                <div className="flex gap-4">
+                {/* <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
                     <Phone size={20} className="text-primary" />
                   </div>
@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
                       +1 (415) 555-0100
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Location */}
                 <div className="flex gap-4">
@@ -124,7 +124,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-bold text-white mb-1 tracking-wide">Location</h4>
                     <p className="text-textMuted">
-                      San Francisco, California
+                      Houston, Texas
                     </p>
                   </div>
                 </div>

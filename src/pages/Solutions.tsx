@@ -72,11 +72,11 @@ const Solutions: React.FC = () => {
         <SharedComponents.FadeIn className="relative z-10 max-w-5xl mx-auto text-center">
           <div className="mb-6">
             <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
-              Enterprise Solutions
+              Our Enteprise AI Solutions
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-wide">
-            AI Solutions for Enterprise Operations
+            Explore production-ready AI solutions across industries, function, and business outcomes
           </h1>
           <p className="text-xl text-textMuted italic mb-8 max-w-3xl mx-auto">
             Pre-built, production-ready patterns designed to solve high-impact operational challenges across industries.
@@ -167,7 +167,7 @@ const Solutions: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <SharedComponents.FadeIn className="bg-gradient-to-r from-primary/10 via-transparent to-transparent border border-primary/20 rounded-2xl p-12 md:p-16 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Operations?
+              Ready to get started?
             </h2>
             <p className="text-lg text-textMuted mb-8">
               Let's explore how our solutions can solve your specific challenges.
@@ -176,11 +176,6 @@ const Solutions: React.FC = () => {
               <Link to="/contact-us">
                 <SharedComponents.Button className="rounded-full">
                   Get Started <ArrowRight size={18} />
-                </SharedComponents.Button>
-              </Link>
-              <Link to="/foundation">
-                <SharedComponents.Button variant="secondary" className="rounded-full">
-                  Learn About Our Foundation
                 </SharedComponents.Button>
               </Link>
             </div>

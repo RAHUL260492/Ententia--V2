@@ -12,7 +12,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const SOLUTIONS: Solution[] = [
   {
     id: '1',
-    title: 'Predictive Maintenance',
+    title: 'Operations Assistant',
     shortDescription: 'Enable comprehensive operational and equipment insights to maximize production and profitability.',
     fullDescription: 'A predictive modeling solution that ingests real-time sensor data and historical maintenance logs to predict equipment failures before they occur. It generates actionable alerts and maintenance schedules to minimize unplanned downtime and extend asset life.',
     imageUrl: '/images/predictive-maintenance.png',
@@ -38,7 +38,7 @@ export const SOLUTIONS: Solution[] = [
   },
   {
     id: '2',
-    title: 'Dynamic Work Orders',
+    title: 'Procurement / Contract Intelligence',
     shortDescription: 'Enable end-to-end automated work order generation across production facilities.',
     fullDescription: 'An automated workflow solution that connects operational triggers to workforce management. It auto-generates detailed work orders with required parts, tools, and procedures based on asset health data, ensuring the right technician is dispatched at the right time.',
     imageUrl: '/images/dynamic-work-order.png',
@@ -64,7 +64,7 @@ export const SOLUTIONS: Solution[] = [
   },
   {
     id: '3',
-    title: 'OT Cyber Resilience',
+    title: 'Workflow Analyst',
     shortDescription: 'Enable automated network isolation and comprehensive monitoring for critical infrastructure.',
     fullDescription: 'A specialized security agent for Operational Technology (OT) networks. It continuously monitors industrial control protocols for anomalies, unauthorized access, and potential threats, capable of automated segmentation to contain breaches and ensure resilience.',
     imageUrl: '/images/ot-cyber-resilience.png',
@@ -90,7 +90,7 @@ export const SOLUTIONS: Solution[] = [
   },
   {
     id: '4',
-    title: 'Automate Work Order Triage',
+    title: 'Payroll & Invoice Auditor',
     shortDescription: 'Route, summarize, and prioritize work orders with guardrails — reduce backlog and speed execution.',
     fullDescription: 'Use intelligent agents to triage incoming maintenance requests. The system categorizes issues, identifies duplicates, prioritizes based on criticality, and routes to the correct trade or department without manual intervention, significantly reducing backlog.',
     imageUrl: '/images/automate-work-order-triage.png',
@@ -306,41 +306,65 @@ export const SERVICE_OFFERINGS: ServiceOffering[] = [
 
 export const PLATFORM_FEATURES: PlatformFeature[] = [
   {
-    title: 'Built-in Energy Industry Context',
-    description: 'Embedded domain knowledge, operational context, and terminology specific to the energy sector.'
+    id: "accelerated-delivery",
+    title: "Accelerated Solution Delivery",
+    description:
+      "Rapid development and deployment cycles that reduce time-to-market while maintaining quality.",
+    iconKey: "speed",
   },
   {
-    title: 'Enterprise-Grade Data Connectivity',
-    description: 'Secure integration with structured and unstructured enterprise data sources.'
+    id: "security-first",
+    title: "Security by Design",
+    description:
+      "Built-in security controls and best practices that protect data and ensure compliance.",
+    iconKey: "security",
   },
   {
-    title: 'Accuracy & Risk Guardrails',
-    description: 'Built-in controls for reliable outputs with minimal hallucination risk.'
+    id: "scalable-architecture",
+    title: "Scalable Architecture",
+    description:
+      "Modular, cloud-native architecture that scales seamlessly with business growth.",
+    iconKey: "layers",
   },
   {
-    title: 'Configurable UX & Automations',
-    description: 'Flexible UI and user-defined workflow automations leveraging core AI capabilities.'
-  }
+    id: "reliability",
+    title: "Reliability & Resilience",
+    description:
+      "High availability systems designed to withstand failures and ensure continuity.",
+    iconKey: "shield",
+  },
+  {
+    id: "operational-efficiency",
+    title: "Operational Excellence",
+    description:
+      "Optimized processes and automation that reduce operational overhead.",
+    iconKey: "settings",
+  },
 ];
 
 export const PLATFORM_PRINCIPLES: PlatformPrinciple[] = [
   {
+    id:1,
     title: 'Enterprise-Ready Architecture',
     description: 'A flexible, modular foundation designed to integrate with existing systems, data, and governance frameworks.',
   },
   {
+     id:2,
     title: 'Trust by Default',
     description: 'Accuracy, quality controls, and transparent risk assessment are embedded throughout the lifecycle - from design and evaluation through runtime - enabling confident adoption in high-impact environments.',
   },
   {
+     id:3,
     title: 'Built for Scale and Reliability',
     description: 'Production-grade performance, observability, and lifecycle management ensure solutions operate reliably and consistently as usage scales.',
   },
   {
+     id:4,
     title: 'Configurable UX and User-defined Automations',
     description: 'Flexible user interface (UI) and user-defined workflow automation capabilities empower users to analyze data, adapt and execute workflows with confidence.',
   },
   {
+     id:5,
     title: 'Accelerated Value Delivery',
     description: 'Intentional use of reusable templates, and accelerators help teams move from use case concept to production quickly, without sacrificing security, governance, or trust.',
   }

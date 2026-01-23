@@ -80,9 +80,11 @@ export interface PlatformFeature {
   title: string;
   description: string;
   bullets?: string[];
+  iconKey?: string;
 }
 
 export interface PlatformPrinciple {
+  id: number;
   title: string;
   description: string;
 }
